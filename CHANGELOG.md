@@ -1,3 +1,10 @@
+# Versions
+
+## 0.2.2
+
+- Updated dependencies
+- Removed unnecessary rules
+
 ## 0.2.1
 
 - Add "add every missing fields" dart fix for "missing_field_in_equatable_props" lint
