@@ -38,7 +38,7 @@ class CallSuperInOverridedEquatableProps extends DartFix {
           );
         });
       },
-      optionnalPreCheck: (classNode) {
+      optionalPreCheck: (classNode) {
         if (!classNode.sourceRange.intersects(analysisError.sourceRange)) {
           return false;
         }

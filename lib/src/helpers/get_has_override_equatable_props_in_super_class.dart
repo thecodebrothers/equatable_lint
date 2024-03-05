@@ -1,7 +1,6 @@
 import 'package:analyzer/dart/element/element.dart';
 import 'package:collection/collection.dart';
-
-import '../../const.dart';
+import 'package:equatable_lint/src/constants/equatable_constants.dart';
 
 /// Check if the superclass has override props or not
 bool getHasOverrideEquatablePropsInSuperClass(
@@ -12,14 +11,14 @@ bool getHasOverrideEquatablePropsInSuperClass(
     (accessor) =>
         accessor.hasOverride &&
         accessor.isGetter &&
-        accessor.name == equatablePropsName,
+        accessor.name == equatablePropsFieldName,
   );
   if (equatablePropsAccessorElement != null) {
     return true;
   }
 
   final equatablePropsFieldElement = superClassElement.fields.firstWhereOrNull(
-    (field) => field.hasOverride && field.name == equatablePropsName,
+    (field) => field.hasOverride && field.name == equatablePropsFieldName,
   );
   return equatablePropsFieldElement != null;
 }

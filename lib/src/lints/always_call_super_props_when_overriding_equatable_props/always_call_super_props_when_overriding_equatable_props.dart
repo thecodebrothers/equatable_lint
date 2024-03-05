@@ -1,8 +1,8 @@
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
-
-import 'fixes/call_super_in_overrided_equatable_props.dart';
-import 'helpers/add_equatable_super_class_declaration_listener.dart';
+import 'package:equatable_lint/src/constants/package_constants.dart';
+import 'package:equatable_lint/src/lints/always_call_super_props_when_overriding_equatable_props/fixes/call_super_in_overridden_equatable_props.dart';
+import 'package:equatable_lint/src/lints/always_call_super_props_when_overriding_equatable_props/helpers/add_equatable_super_class_declaration_listener.dart';
 
 /// Lint to make props override call super.props if needed
 class AlwaysCallSuperPropsWhenOverridingEquatableProps extends DartLintRule {
@@ -12,7 +12,9 @@ class AlwaysCallSuperPropsWhenOverridingEquatableProps extends DartLintRule {
   static const _code = LintCode(
     name: 'always_call_super_props_when_overriding_equatable_props',
     problemMessage:
-        'Dont forget to call super.props when overriding equatable props',
+        'Do not forget to call super.props when overriding equatable props',
+    url:
+        '''$equatableLintGithubRepositoryBaseUrl?tab=readme-ov-file#always_call_super_props_when_overriding_equatable_props''',
   );
 
   @override
@@ -32,6 +34,6 @@ class AlwaysCallSuperPropsWhenOverridingEquatableProps extends DartLintRule {
 
   @override
   List<Fix> getFixes() => [
-        CallSuperInOverridedEquatableProps(),
+        CallSuperInOverriddenEquatableProps(),
       ];
 }

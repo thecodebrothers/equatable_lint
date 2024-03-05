@@ -1,4 +1,4 @@
-import 'convert_fields_names_to_single_string.dart';
+import 'package:equatable_lint/src/lints/missing_field_in_equatable_props/helpers/convert_fields_names_to_single_string.dart';
 
 /// Helper to get a formatted string with the correct fields in it
 /// Depending on whether your super class override equatable props

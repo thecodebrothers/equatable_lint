@@ -2,38 +2,26 @@
 
 ## 0.2.2
 
-- Updated dependencies
-- Removed unnecessary rules
+- Assists :
+    - Add assist to help you extends Equatable when your class is not already doing it
+- Lints :
+    - add urls linking to lints details
+
+- Fix bug showing `always_call_super_props_when_overriding_equatable_props` on class extending another non equatable class with props field
 
 ## 0.2.1
 
-- Add "add every missing fields" dart fix for "missing_field_in_equatable_props" lint
-- Add "call super in overrided equatable props" dart fix for "always_call_super_props_when_overriding_equatable_props" lint
+- Fork from [equatable_lint](https://pub.dev/packages/equatable_lint)
 
-## 0.2.0
+- Available lints :
+    - Lint when a field is missing in equatable props => "missing_field_in_equatable_props"
+    - Lint when a class extending an Equatable class does not call super when overriding equatable props => "always_call_super_props_when_overriding_equatable_props"
 
-- Upgrade custom lint to 0.2.12
-
-## 0.1.5
-
-- Upgrade custom lint to 0.1.1
-
-## 0.1.4
-
-- Add fix to show multiple lints when there are multiple fields
-
-## 0.1.3
-
-- Change package ownership
-
-## 0.1.2
-
-- Fix bug that count static fields in create_equatable_props_with_every_fields lint
-
-## 0.1.1
-
-- Fix bug that count getter and setter in create_equatable_props_with_every_fields lint
-
-## 0.1.0
-
-- Initial version.
+- Available fixes for the lints :
+    - "missing_field_in_equatable_props" :
+        - A quick fix to add every fields to the equatable props
+        - A quick fix to create the equatable props with every fields in it
+        - A quick fix to add a specific field to the equatable props
+        - A quick fix to create the equatable props with a specific in it
+    - "always_call_super_props_when_overriding_equatable_props" :
+        - A quick fix to call super in overridden equatable props

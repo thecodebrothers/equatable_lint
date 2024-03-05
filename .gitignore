@@ -13,3 +13,6 @@ migrate_working_dir/
 # Dart/Pub related
 .dart_tool/
 pubspec.lock
+
+# FVM Version Cache
+.fvm/

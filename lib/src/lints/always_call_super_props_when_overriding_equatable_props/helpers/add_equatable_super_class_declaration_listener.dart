@@ -1,8 +1,8 @@
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
-
-import '../../../helpers/get_equatable_props_expression_infos.dart';
-import '../../../helpers/get_has_override_equatable_props_in_super_class.dart';
+import 'package:equatable_lint/src/constants/equatable_constants.dart';
+import 'package:equatable_lint/src/helpers/get_equatable_props_expression_infos.dart';
+import 'package:equatable_lint/src/helpers/get_has_override_equatable_props_in_super_class.dart';
 
 /// Extension to add a specific listener for equatable super class
 extension AddEquatableSuperClassDeclarationListener on LintRuleNodeRegistry {
@@ -12,13 +12,12 @@ extension AddEquatableSuperClassDeclarationListener on LintRuleNodeRegistry {
       required ClassDeclaration classNode,
       required ClassMember equatablePropsClassMember,
       required EquatablePropsExpressionDetails equatablePropsExpressionDetails,
-    })
-        listener, {
-    bool Function(ClassDeclaration)? optionnalPreCheck,
+    }) listener, {
+    bool Function(ClassDeclaration)? optionalPreCheck,
   }) {
     addClassDeclaration((classNode) {
-      if (optionnalPreCheck != null) {
-        final canContinue = optionnalPreCheck(classNode);
+      if (optionalPreCheck != null) {
+        final canContinue = optionalPreCheck(classNode);
         if (!canContinue) {
           return;
         }
@@ -28,6 +27,16 @@ extension AddEquatableSuperClassDeclarationListener on LintRuleNodeRegistry {
           classNode.declaredElement!.supertype?.element;
 
       if (classSuperTypeElement == null) {
+        return;
+      }
+
+      const typeChecker = TypeChecker.fromName(
+        equatableClassName,
+        packageName: equatablePackageName,
+      );
+      final classType = classSuperTypeElement.thisType;
+
+      if (!typeChecker.isAssignableFromType(classType)) {
         return;
       }
 

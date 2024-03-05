@@ -2,9 +2,8 @@ import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/element/element.dart';
 import 'package:collection/collection.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
-
-import '../../../constants/equatable_props_field_name.dart';
-import '../../../helpers/get_equatable_props_expression_infos.dart';
+import 'package:equatable_lint/src/constants/equatable_constants.dart';
+import 'package:equatable_lint/src/helpers/get_equatable_props_expression_infos.dart';
 
 /// Extension to add a specific listener for equatable class fields
 extension AddEquatableClassFieldDeclarationListener on LintRuleNodeRegistry {
@@ -16,13 +15,12 @@ extension AddEquatableClassFieldDeclarationListener on LintRuleNodeRegistry {
       required ClassDeclaration classNode,
       required List<FieldElement> watchableFields,
       required EquatablePropsExpressionDetails? equatablePropsExpressionDetails,
-    })
-        listener, {
-    bool Function(FieldDeclaration)? optionnalPreCheck,
+    }) listener, {
+    bool Function(FieldDeclaration)? optionalPreCheck,
   }) {
     addFieldDeclaration((fieldNode) {
-      if (optionnalPreCheck != null) {
-        final canContinue = optionnalPreCheck(fieldNode);
+      if (optionalPreCheck != null) {
+        final canContinue = optionalPreCheck(fieldNode);
         if (!canContinue) {
           return;
         }
@@ -39,8 +37,10 @@ extension AddEquatableClassFieldDeclarationListener on LintRuleNodeRegistry {
         return;
       }
 
-      const typeChecker =
-          TypeChecker.fromName('Equatable', packageName: 'equatable');
+      const typeChecker = TypeChecker.fromName(
+        equatableClassName,
+        packageName: equatablePackageName,
+      );
       final classType = classElement.thisType;
 
       if (!typeChecker.isAssignableFromType(classType)) {

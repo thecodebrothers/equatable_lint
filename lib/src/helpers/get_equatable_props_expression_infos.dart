@@ -1,7 +1,6 @@
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:collection/collection.dart';
-
-import '../constants/equatable_props_field_name.dart';
+import 'package:equatable_lint/src/constants/equatable_constants.dart';
 
 /// Equatable props fields details parsed from equatable props node
 class EquatablePropsExpressionDetails {
@@ -20,7 +19,7 @@ class EquatablePropsExpressionDetails {
   /// part after the array of fields of the props expression
   final String lastPart;
 
-  /// offset to the begining of the props expression
+  /// offset to the beginning of the props expression
   final int offset;
 
   /// length of the props expression
@@ -33,27 +32,27 @@ class EquatablePropsExpressionDetails {
 String? _getEquatablePropsExpressionInitialPart(
   String equatablePropsExpression,
 ) {
-  final openArrayBrackIndex = equatablePropsExpression.indexOf('[');
-  if (openArrayBrackIndex == -1) {
+  final openArrayBracketIndex = equatablePropsExpression.indexOf('[');
+  if (openArrayBracketIndex == -1) {
     return null;
   }
 
   return equatablePropsExpression.substring(
     0,
-    openArrayBrackIndex,
+    openArrayBracketIndex,
   )..replaceAll('const', '');
 }
 
 String _getEquatablePropsExpressionLastPart(String equatablePropsExpression) {
-  final closeArrayBrackIndex = equatablePropsExpression.indexOf(']');
-  if (closeArrayBrackIndex == -1) {
+  final closeArrayBracketIndex = equatablePropsExpression.indexOf(']');
+  if (closeArrayBracketIndex == -1) {
     return '';
   }
-  if (closeArrayBrackIndex == equatablePropsExpression.length - 1) {
+  if (closeArrayBracketIndex == equatablePropsExpression.length - 1) {
     return '';
   }
 
-  return equatablePropsExpression.substring(closeArrayBrackIndex + 1);
+  return equatablePropsExpression.substring(closeArrayBracketIndex + 1);
 }
 
 List<String> _getFieldsNamesFromPropsExpression(
