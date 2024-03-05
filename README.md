@@ -120,23 +120,23 @@ class MyClass extends RandomClassExtendingEquatable {
 
 #### Add every fields to equatable props
 
-![Add every fields to equatable props sample](https://raw.githubusercontent.com/TomaszCz/equatable_lint/main/resources/add_every_fields_to_equatable_props.mp4)
+![Add every fields to equatable props sample](https://raw.githubusercontent.com/TomaszCz/equatable_lint/main/resources/add_every_fields_to_equatable_props.gif)
 
 #### Add field to equatable props
 
-![Add field to equatable props sample](https://raw.githubusercontent.com/TomaszCz/equatable_lint/main/resources/add_field_to_equatable_props.mp4)
+![Add field to equatable props sample](https://raw.githubusercontent.com/TomaszCz/equatable_lint/main/resources/add_field_to_equatable_props.gif)
 
 ### always_call_super_props_when_overriding_equatable_props fixes
 
 #### Call super in overridden equatable props
 
-![Call super in overridden equatable props sample](https://raw.githubusercontent.com/TomaszCz/equatable_lint/main/resources/call_super_in_overridden_equatable_props.mp4)
+![Call super in overridden equatable props sample](https://raw.githubusercontent.com/TomaszCz/equatable_lint/main/resources/call_super_in_overridden_equatable_props.gif)
 
 ## All the assists
 
 ### Make class extend Equatable
 
-![Make class extend Equatable sample](https://raw.githubusercontent.com/TomaszCz/equatable_lint/main/resources/make_class_extend_equatable.mp4)
+![Make class extend Equatable sample](https://raw.githubusercontent.com/TomaszCz/equatable_lint/main/resources/make_class_extend_equatable.gif)
 
 ## About Tomasz Czajka
 
