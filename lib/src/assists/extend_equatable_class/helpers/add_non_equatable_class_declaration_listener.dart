@@ -1,6 +1,6 @@
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
-import 'package:equatable_lint/src/constants/equatable_constants.dart';
+import 'package:equatable_lint_ultimate/src/constants/equatable_constants.dart';
 
 /// Extension to add a specific listener for non equatable class
 extension AddNonEquatableClassDeclarationListener on LintRuleNodeRegistry {

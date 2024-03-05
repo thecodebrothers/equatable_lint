@@ -2,4 +2,4 @@
 
 ---
 
-Demonstrates how to use the `equatable_lint` plugin.
+Demonstrates how to use the `equatable_lint_ultimate` plugin.

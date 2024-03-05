@@ -1,6 +1,6 @@
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:collection/collection.dart';
-import 'package:equatable_lint/src/constants/equatable_constants.dart';
+import 'package:equatable_lint_ultimate/src/constants/equatable_constants.dart';
 
 /// Equatable props fields details parsed from equatable props node
 class EquatablePropsExpressionDetails {

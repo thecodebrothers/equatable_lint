@@ -1,5 +1,5 @@
 name: equatable_lint_example
-description: Package with every examples for the equatable_lint package
+description: Package with every examples for the equatable_lint_ultimate package
 version: 0.1.2
 
 publish_to: none
@@ -12,5 +12,5 @@ dependencies:
 
 dev_dependencies:
   custom_lint: ^0.6.0
-  equatable_lint:
+  equatable_lint_ultimate:
     path: ../

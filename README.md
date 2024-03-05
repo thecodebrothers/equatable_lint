@@ -1,4 +1,4 @@
-# equatable_lint
+# equatable_lint_ultimate
 
 ---
 
@@ -32,7 +32,7 @@ This package used the [custom_lint](https://github.com/invertase/dart_custom_lin
 ```yaml
 dev_dependencies:
   custom_lint:
-  equatable_lint:
+  equatable_lint_ultimate:
 ```
 
 - In your `analysis_options.yaml`, add this plugin :

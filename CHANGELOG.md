@@ -11,7 +11,7 @@
 
 ## 0.2.1
 
-- Fork from [equatable_lint](https://pub.dev/packages/equatable_lint)
+- Fork from [equatable_lint_ultimate](https://pub.dev/packages/equatable_lint_ultimate)
 
 - Available lints :
     - Lint when a field is missing in equatable props => "missing_field_in_equatable_props"

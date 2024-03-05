@@ -1,8 +1,8 @@
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
-import 'package:equatable_lint/src/constants/equatable_constants.dart';
-import 'package:equatable_lint/src/helpers/get_equatable_props_expression_infos.dart';
-import 'package:equatable_lint/src/helpers/get_has_override_equatable_props_in_super_class.dart';
+import 'package:equatable_lint_ultimate/src/constants/equatable_constants.dart';
+import 'package:equatable_lint_ultimate/src/helpers/get_equatable_props_expression_infos.dart';
+import 'package:equatable_lint_ultimate/src/helpers/get_has_override_equatable_props_in_super_class.dart';
 
 /// Extension to add a specific listener for equatable super class
 extension AddEquatableSuperClassDeclarationListener on LintRuleNodeRegistry {
