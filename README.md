@@ -16,16 +16,14 @@ This package used the [custom_lint](https://github.com/invertase/dart_custom_lin
 - [All the lints](#all-the-lints)
   - [missing\_field\_in\_equatable_props](#missing_field_in_equatable_props)
   - [always\_call\_super\_props\_when\_overriding\_equatable\_props](#always_call_super_props_when_overriding_equatable_props)
-- [All the lints' fixes](#all-the-lints'-fixes)
+- [All the lints fixes](#all-the-lints-fixes)
   - [missing\_field\_in\_equatable_props fixes](#missing_field_in_equatable_props-fixes)
     - [Add every fields to equatable props](#add-every-fields-to-equatable-props)
     - [Add field to equatable props](#add-field-to-equatable-props)
-    - [Create equatable props with every fields in it](#create-equatable-props-with-every-fields-in-it)
-    - [Create equatable props with field in it](#create-equatable-props-with-field-in-it)
   - [always\_call\_super\_props\_when\_overriding\_equatable\_props fixes](#always_call_super_props_when_overriding_equatable_props-fixes)
     - [Call super in overridden equatable props](#call-super-in-overridden-equatable-props)
 - [All the assists](#all-the-assists)
-  - [Make class extend Equatable](#make-class-extend-Equatable)
+  - [Make class extend Equatable](#make-class-extend-equatable)
 
 ## Setup local
 
@@ -114,7 +112,7 @@ class MyClass extends RandomClassExtendingEquatable {
 }
 ```
 
-## All the lints' fixes
+## All the lints fixes
 
 ### missing_field_in_equatable_props fixes
 
