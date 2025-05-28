@@ -1,5 +1,8 @@
 # Versions
 
+## 1.0.0
+- Updated to work with the latest version of Equatable and Dart SDK.
+
 ## 0.2.3
 
 - Fixed bug: did not work as a plugin.

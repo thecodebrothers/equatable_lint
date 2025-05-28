@@ -1,11 +1,11 @@
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
-import 'package:equatable_lint_ultimate/src/constants/package_constants.dart';
-import 'package:equatable_lint_ultimate/src/lints/missing_field_in_equatable_props/fixes/add_every_fields_to_equatable_props.dart';
-import 'package:equatable_lint_ultimate/src/lints/missing_field_in_equatable_props/fixes/add_field_to_equatable_props.dart';
-import 'package:equatable_lint_ultimate/src/lints/missing_field_in_equatable_props/fixes/create_equatable_props_with_every_fields_in_it.dart';
-import 'package:equatable_lint_ultimate/src/lints/missing_field_in_equatable_props/fixes/create_equatable_props_with_field_in_it.dart';
-import 'package:equatable_lint_ultimate/src/lints/missing_field_in_equatable_props/helpers/add_equatable_class_field_declaration_listener.dart';
+import 'package:equatable_custom_lint/src/constants/package_constants.dart';
+import 'package:equatable_custom_lint/src/lints/missing_field_in_equatable_props/fixes/add_every_fields_to_equatable_props.dart';
+import 'package:equatable_custom_lint/src/lints/missing_field_in_equatable_props/fixes/add_field_to_equatable_props.dart';
+import 'package:equatable_custom_lint/src/lints/missing_field_in_equatable_props/fixes/create_equatable_props_with_every_fields_in_it.dart';
+import 'package:equatable_custom_lint/src/lints/missing_field_in_equatable_props/fixes/create_equatable_props_with_field_in_it.dart';
+import 'package:equatable_custom_lint/src/lints/missing_field_in_equatable_props/helpers/add_equatable_class_field_declaration_listener.dart';
 
 /// Lint to add missing fields to equatable props
 class MissingFieldInEquatableProps extends DartLintRule {
@@ -40,7 +40,7 @@ class MissingFieldInEquatableProps extends DartLintRule {
               false;
 
       if (!isFieldInEquatableProps) {
-        reporter.reportErrorForNode(_code, fieldNode);
+        reporter.atNode(fieldNode, _code);
       }
     });
   }

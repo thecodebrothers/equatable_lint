@@ -1,8 +1,8 @@
 import 'package:analyzer/source/source_range.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
-import 'package:equatable_lint_ultimate/src/assists/extend_equatable_class/helpers/add_non_equatable_class_declaration_listener.dart';
-import 'package:equatable_lint_ultimate/src/constants/equatable_constants.dart';
-import 'package:equatable_lint_ultimate/src/helpers/source_range_from.dart';
+import 'package:equatable_custom_lint/src/assists/extend_equatable_class/helpers/add_non_equatable_class_declaration_listener.dart';
+import 'package:equatable_custom_lint/src/constants/equatable_constants.dart';
+import 'package:equatable_custom_lint/src/helpers/source_range_from.dart';
 
 /// Assist to make class extends Equatable if needed
 class ExtendEquatableClass extends DartAssist {

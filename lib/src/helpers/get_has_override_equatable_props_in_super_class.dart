@@ -1,6 +1,6 @@
 import 'package:analyzer/dart/element/element.dart';
 import 'package:collection/collection.dart';
-import 'package:equatable_lint_ultimate/src/constants/equatable_constants.dart';
+import 'package:equatable_custom_lint/src/constants/equatable_constants.dart';
 
 /// Check if the superclass has override props or not
 bool getHasOverrideEquatablePropsInSuperClass(

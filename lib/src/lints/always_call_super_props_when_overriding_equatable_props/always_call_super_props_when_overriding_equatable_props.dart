@@ -1,8 +1,8 @@
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
-import 'package:equatable_lint_ultimate/src/constants/package_constants.dart';
-import 'package:equatable_lint_ultimate/src/lints/always_call_super_props_when_overriding_equatable_props/fixes/call_super_in_overridden_equatable_props.dart';
-import 'package:equatable_lint_ultimate/src/lints/always_call_super_props_when_overriding_equatable_props/helpers/add_equatable_super_class_declaration_listener.dart';
+import 'package:equatable_custom_lint/src/constants/package_constants.dart';
+import 'package:equatable_custom_lint/src/lints/always_call_super_props_when_overriding_equatable_props/fixes/call_super_in_overridden_equatable_props.dart';
+import 'package:equatable_custom_lint/src/lints/always_call_super_props_when_overriding_equatable_props/helpers/add_equatable_super_class_declaration_listener.dart';
 
 /// Lint to make props override call super.props if needed
 class AlwaysCallSuperPropsWhenOverridingEquatableProps extends DartLintRule {
@@ -28,7 +28,7 @@ class AlwaysCallSuperPropsWhenOverridingEquatableProps extends DartLintRule {
       required equatablePropsClassMember,
       required equatablePropsExpressionDetails,
     }) {
-      reporter.reportErrorForNode(_code, equatablePropsClassMember);
+      reporter.atNode(equatablePropsClassMember, _code);
     });
   }
 

@@ -1,11 +1,12 @@
-# equatable_lint_ultimate
+# equatable_custom_lint
 
 ---
 
-This package is based on a fork from the [equatable_lint](https://pub.dev/packages/equatable_lint) package
+This package is based on a fork from the [equatable_lint_ultimate](https://github.com/TomaszCz/equatable_lint) which is a fork of [equatable_lint](https://pub.dev/packages/equatable_lint) package
 
 This package used the [custom_lint](https://github.com/invertase/dart_custom_lint) package
 
+Sponsored by [The Code Brothers](https://thecodebrothers.pl)
 ---
 
 ## Table of content
@@ -32,7 +33,7 @@ This package used the [custom_lint](https://github.com/invertase/dart_custom_lin
 ```yaml
 dev_dependencies:
   custom_lint:
-  equatable_lint_ultimate:
+  equatable_custom_lint:
 ```
 
 - In your `analysis_options.yaml`, add this plugin :
