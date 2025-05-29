@@ -1,5 +1,8 @@
 # Versions
 
+## 1.0.1
+- Update README
+
 ## 1.0.0
 - Updated to work with the latest version of Equatable and Dart SDK.
 

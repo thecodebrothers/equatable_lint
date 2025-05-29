@@ -136,7 +136,3 @@ class MyClass extends RandomClassExtendingEquatable {
 ### Make class extend Equatable
 
 ![Make class extend Equatable sample](https://raw.githubusercontent.com/TomaszCz/equatable_lint/main/resources/make_class_extend_equatable.gif)
-
-## About Tomasz Czajka
-
-I am deeply committed to ensuring code quality, which is why I have chosen to adopt these wonderful package (as their original [authors](https://github.com/Bendix20/equatable_lint?tab=readme-ov-file#-about-bam) are no longer reachable).
